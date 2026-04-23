@@ -2,12 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const skills = [
-  { icon: "/vector.svg", skill: "Strategic Career Guidance" },
-  { icon: "/vector.svg", skill: "Leadership Development" },
-  { icon: "/vector.svg", skill: "CV Development" },
-  { icon: "/vector.svg", skill: "Sustainability Leadership" },
-  { icon: "/vector.svg", skill: "Communication Skills" },
-  { icon: "/vector.svg", skill: "Business Model" },
+  { icon: "/vector2.svg", skill: "Strategic Career Guidance" },
+  { icon: "/vector2.svg", skill: "Leadership Development" },
+  { icon: "/vector2.svg", skill: "CV Development" },
+  { icon: "/vector2.svg", skill: "Sustainability Leadership" },
+  { icon: "/vector2.svg", skill: "Communication Skills" },
+  { icon: "/vector2.svg", skill: "Business Model" },
 ]
 
 const Transformation = () => {

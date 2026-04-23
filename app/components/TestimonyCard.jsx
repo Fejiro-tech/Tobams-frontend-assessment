@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Image from 'next/image'
 
 const TestimonyCard = ({ image, name, position, testimony }) => {
