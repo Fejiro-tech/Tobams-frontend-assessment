@@ -19,7 +19,7 @@ const LearningManagement = () => {
       Learning Management System
     </h2>
 
-    <figure className="w-[380px] h-[380px] md:w-[500px] md:h-[500px] mx-auto lg:mx-0 relative shrink-0">
+    <figure className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[500px] lg:h-[500px] mx-auto lg:mx-0 relative shrink-0">
       <Image
         src="/image1.jpg"
         fill
@@ -28,7 +28,7 @@ const LearningManagement = () => {
       />
     </figure>
 
-    <article className="w-full  flex flex-col gap-6 ">
+    <article className="w-full max-w-3xl  flex flex-col gap-6 ">
       <h2 className="hidden md:block text-[#571244] text-[40px] font-semibold">
         Learning Management System
       </h2>
