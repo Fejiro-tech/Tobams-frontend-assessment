@@ -2,12 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const skills = [
-  { icon: "/vector.svg", skill: "Learning Development" },
-  { icon: "/vector.svg", skill: "Learning Development" },
-  { icon: "/vector.svg", skill: "Learning Development" },
-  { icon: "/vector.svg", skill: "Learning Development" },
-  { icon: "/vector.svg", skill: "Learning Development" },
-  { icon: "/vector.svg", skill: "Learning Development" },
+  { icon: "/vector.svg", skill: "Strategic Career Guidance" },
+  { icon: "/vector.svg", skill: "Leadership Development" },
+  { icon: "/vector.svg", skill: "CV Development" },
+  { icon: "/vector.svg", skill: "Sustainability Leadership" },
+  { icon: "/vector.svg", skill: "Communication Skills" },
+  { icon: "/vector.svg", skill: "Business Model" },
 ]
 
 const Transformation = () => {
@@ -39,24 +39,24 @@ const Transformation = () => {
                 fill
                 alt="Transformation hub"
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 550px"
               />
             </figure>
 
-            <article className="w-full max-w-[500px] lg:max-w-none lg:w-[55%] bg-[#FFFFFF4D] rounded-[8px] p-5 md:p-8 flex flex-col gap-6">
+            <article className="w-full max-w-[500px] lg:max-w-none lg:w-[55%] bg-[#FFFFFF4D] rounded-[8px] p-5 lg:p-8 flex flex-col gap-6">
               <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
                 {skills.map((item, idx) => (
                   <li
                     key={idx}
                     className="flex items-center gap-3 bg-white p-3 md:p-4 rounded-[10px]"
                   >
-                    <Image
+                    <img
                       src={item.icon}
-                      width={14}
-                      height={14}
-                      alt=""
+                      alt="vector"
                       aria-hidden="true"
+                      className='w-3.5 h-3.5 md:w-4 md:h-4'
                     />
-                    <span className="text-sm md:text-base wrap-break-word">
+                    <span className="text-sm lg:text-base">
                       {item.skill}
                     </span>
                   </li>
@@ -69,12 +69,11 @@ const Transformation = () => {
                   className="bg-[#571244] text-white w-fit py-2.5 px-6 rounded-lg flex gap-2 items-center"
                 >
                   <span>Learn More</span>
-                  <Image
+                  <img
                     src="/arrow-up-right.svg"
-                    width={10}
-                    height={10}
-                    alt=""
-                    aria-hidden="true"
+                    
+                    alt='arrow-up-right'
+                    className='w-2.5 h-2.5'
                   />
                 </Link>
               </footer>

@@ -12,7 +12,6 @@ A responsive website built with **Next.js** and **Tailwind CSS** for the Tobams 
 
 ```
 
-
 ---
 
 ## Tech Stack
@@ -61,3 +60,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 - Horizontal scrollable testimonials carousel with arrow controls
 - Semantic HTML throughout all components
 - Optimized images via Next/Image# Tobams-frontend-assessment
+
+---
+## AI Assistance
+
+AI tools (ChatGPT & Claude) were used only for debugging support. All implementation decisions, component structure, and UI development were carried out by me.

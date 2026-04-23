@@ -70,7 +70,8 @@ const Footer = () => {
                 width={150}
                 height={100}
                 alt="logo"
-                className='w-47'
+                sizes="188px"
+                className='w-47 h-auto'
             />
     
 
@@ -84,7 +85,7 @@ const Footer = () => {
           <div className="flex items-center gap-3 mt-2 ">
             {icons.map((item, idx) => (
                 <Link href="#" key={idx} className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-black bg-[#FFFFFF] hover:bg-white/10 transition-colors">
-                    <Image src={item.src} alt={item.alt} width={16} height={16} />
+                    <img src={item.src} alt={item.alt} className='w-4 h-4'/>
                 </Link>
             ))}
            
@@ -175,7 +176,7 @@ const Footer = () => {
           className="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition-colors"
         >
           <span className="w-7 h-7 rounded-full bg-[#B91C6B]/20 flex items-center justify-center shrink-0">
-            <Image src="/mail.svg" width={14} height={14} alt="" aria-hidden="true" />
+            <img src="/mail.svg"  alt="mail" className='w-3.5 h-3.5' />
           </span>
           theteam@tobamsgroup.com
         </Link>
@@ -184,7 +185,7 @@ const Footer = () => {
           className="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition-colors"
         >
           <span className="w-7 h-7 rounded-full bg-[#B91C6B]/20 flex items-center justify-center shrink-0">
-            <Image src="/phone.svg" width={14} height={14} alt="" aria-hidden="true" />
+            <img src="/phone.svg" alt="phone" className='w-3.5 h-3.5'/>
           </span>
           +447886600748
         </Link>

@@ -30,12 +30,15 @@ const TopBar = () => {
       <div className="border-b border-[#DDD0DA]">
         <div className="max-w-[1440px] mx-auto flex justify-between items-center px-6 md:px-8 lg:px-16 md:py-4 lg:py-6">
 
-          <Image
-            src="/tobamslogo.png"
-            width={130}
-            height={80}
-            alt="logo"
-          />
+          <div className="relative w-[130px] h-[80px] shrink-0">
+            <Image
+              src="/tobamslogo.png"
+              fill
+              alt="logo"
+              sizes="130px"
+              className="object-contain"
+            />
+          </div>
 
           <div className="hidden md:flex gap-4 items-center">
             <Link
@@ -43,15 +46,15 @@ const TopBar = () => {
               className="bg-[#571244] rounded-md py-2 px-4 flex items-center gap-2 text-white text-sm font-medium"
             >
               <span className="w-6 h-6 bg-[#DDD0DA] rounded-full flex items-center justify-center">
-                <Image src="/user.svg" width={12} height={12} alt="user icon" />
+                <img src="/user.svg" width={12} height={12} alt="user icon" />
               </span>
               Account
-              <Image src="/arrow-down.svg" width={12} height={12} alt="arrow down" />
+              <img src="/arrow-down.svg" alt="arrow down" className="w-3 h-3"/>
             </Link>
 
             <Link
               href="#"
-              className="bg-[#EF4353] rounded-md py-2 px-5 text-white text-sm font-medium"
+              className="bg-[#EF4353] rounded-md py-2.5 px-5 text-white text-sm font-medium"
             >
               Take Assessment
             </Link>
@@ -64,7 +67,7 @@ const TopBar = () => {
             {mobileOpen ? (
               <X size={24} />
             ) : (
-              <Image src="/hamburger.svg" width={24} height={24} alt="hamburger" />
+              <img src="/hamburger.svg" alt="hamburger" className="w-6 h-6" />
             )}
           </button>
 
@@ -72,7 +75,7 @@ const TopBar = () => {
       </div>
 
       <div className="hidden md:block w-full">
-        <div className="max-w-5xl mx-auto flex items-center justify-center gap-4 lg:px-16 py-3">
+        <div className="max-w-5xl mx-auto flex items-center justify-center gap-4 lg:px-16 py-5">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -86,7 +89,7 @@ const TopBar = () => {
             >
               {link.label}
               {link.hasDropdown && (
-                <Image src="/arrow-down.svg" width={12} height={12} alt="arrow down" />
+                <img src="/arrow-down.svg" alt="arrow down" className="w-3 h-3" />
               )}
             </Link>
           ))}
@@ -118,7 +121,7 @@ const TopBar = () => {
             >
               {link.label}
               {link.hasDropdown && (
-                <Image src="/arrow-down.svg" width={12} height={12} alt="arrow down" />
+                <img src="/arrow-down.svg"  alt="arrow down" className="w-2 h-2"/>
               )}
             </Link>
           ))}

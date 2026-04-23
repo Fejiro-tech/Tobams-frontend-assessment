@@ -1,7 +1,6 @@
 'use client'
 import { useRef } from 'react'
 import TestimonyCard from '../components/TestimonyCard'
-import Image from 'next/image'
 
 const testimonies = [
   {
@@ -23,7 +22,7 @@ const testimonies = [
     testimony: "Tobams Group has been instrumental in our talent acquisition journey. Their Tech Talent Solution service consistently connects us with the right professionals. Reliable and straightforward."
   },
   {
-    image: "/image6.png",
+    image: "/image2.jpg",
     name: "Lorem Ipsum",
     position: "CEO, Lorem Corp",
     testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tobams Group exceeded our expectations and delivered outstanding results across every milestone of our project journey."
@@ -36,55 +35,51 @@ const Testimonials = () => {
   const scroll = (direction) => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: direction === 'left' ? -442 : 442,
+        left: direction === 'left' ? -420 : 420,
         behavior: 'smooth',
       })
     }
   }
 
   return (
-    <section className="md:py-16 w-full p-6">
-      <h2 className="text-[#151515] text-[40px] font-bold text-center mb-8">Testimonials</h2>
+    <section className="w-full py-16 px-4 md:px-16">
+
+      <h2 className="text-[#151515] text-[40px] font-bold text-center mb-10">
+        Testimonials
+      </h2>
 
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto scroll-smooth px-16 pb-4 hide-scrollbar"
+        className="flex gap-5 overflow-x-auto scroll-smooth px-4 md:px-16 pr-6 md:pr-16 pb-4 hide-scrollbar snap-x snap-mandatory"
       >
         {testimonies.map((item, idx) => (
-          <TestimonyCard
-            key={idx}
-            image={item.image}
-            name={item.name}
-            position={item.position}
-            testimony={item.testimony}
-          />
+          <div key={idx} className="snap-start shrink-0">
+            <TestimonyCard
+              image={item.image}
+              name={item.name}
+              position={item.position}
+              testimony={item.testimony}
+            />
+          </div>
         ))}
       </div>
 
-      <div className="flex justify-end gap-3 px-16 mt-6">
+      <div className="flex justify-end gap-3 mt-8">
         <button
           onClick={() => scroll('left')}
-          className=""
+          className="bg-[#F043541A] rounded p-2"
         >
-          <Image
-            src="/arrow-left.svg"
-            width={20}
-            height={20}
-            alt="logo"
-          />
+          <img src="/arrow-left.svg" alt="arrow-left" className='w-3 h-3'/>
         </button>
+
         <button
           onClick={() => scroll('right')}
-          className=""
+          className="bg-[#F043541A] rounded p-2"
         >
-          <Image
-            src="/arrow-right.svg"
-            width={20}
-            height={20}
-            alt="logo"
-          />
+          <img src="/arrow-right.svg" alt="arrow-right" className='w-3 h-3' />
         </button>
       </div>
+
     </section>
   )
 }

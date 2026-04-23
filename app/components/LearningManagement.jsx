@@ -13,58 +13,72 @@ const courses = [
 const LearningManagement = () => {
   return (
     <section className="w-full bg-[#5712441A] py-10 px-4 md:py-12 md:px-16">
-  <div className="max-w-[1312px] mx-auto flex flex-col lg:flex-row gap-10 ">
+      <div className="max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10">
 
-    <h2 className="lg:hidden text-[#571244] text-2xl text-center md:text-[40px] font-semibold w-full">
-      Learning Management System
-    </h2>
+        <h2 className="lg:hidden text-[#571244] text-2xl text-center md:text-[32px] font-semibold w-full">
+          Learning Management System
+        </h2>
 
-    <figure className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[500px] lg:h-[500px] mx-auto lg:mx-0 relative shrink-0">
-      <Image
-        src="/image1.jpg"
-        fill
-        alt="Learning Management System visual"
-        className="object-cover rounded-full"
-      />
-    </figure>
-
-    <article className="w-full max-w-3xl  flex flex-col gap-6 ">
-      <h2 className="hidden md:block text-[#571244] text-[40px] font-semibold">
-        Learning Management System
-      </h2>
-
-      <div className="bg-[#5712441A] rounded p-[24px] md:p-6 space-y-5 max-w-4xl ">
-        <p className="text-sm md:text-[18px] leading-relaxed">
-          TG Academy is a hub of knowledge and skill-building resources designed to empower tech talents on their learning journey. From technical courses covering the latest programming languages and development frameworks to soft skills training in leadership, effective communication and project management, TG Academy offers a wide range of courses to cater to diverse learning needs. With accessible and interactive learning materials, individuals can enhance their skills and stay ahead in today's competitive tech landscape.
-        </p>
-
-        <div>
-          <p className="font-bold mt-4">Some of our courses include:</p>
-          <ul className="mt-3 list-disc list-inside grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-            {courses.map((course, index) => (
-              <li key={index}>{course}</li>
-            ))}
-          </ul>
-        </div>
-
-        <Link
-          href="#"
-          className="bg-[#571244] text-white w-fit py-2.5 px-6 rounded-[8px] flex gap-2 items-center"
-        >
-          <span>Learn More</span>
+        <figure className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[550px] lg:h-[550px]  mx-auto lg:mx-0 relative shrink-0">
           <Image
-            src="/arrow-up-right.svg"
-            width={10}
-            height={10}
-            alt=""
-            aria-hidden="true"
+            src="/image1.jpg"
+            fill
+            alt="Learning Management System visual"
+            sizes="(max-width: 640px) 280px,
+            (max-width: 768px) 320px,
+            (max-width: 1024px) 380px,
+            550px"
+            className="object-cover rounded-full"
           />
-        </Link>
-      </div>
-    </article>
+        </figure>
 
-  </div>
-</section>
+        <article className="w-full flex flex-col gap-6 lg:max-w-[700px] xl:max-w-[760px]">
+
+        <h2 className="hidden lg:block text-[#571244] text-[40px] font-semibold">
+          Learning Management System
+        </h2>
+
+        <div className="bg-[#5712441A] rounded p-[24px] md:p-6 space-y-5 w-full">
+
+          <p className="text-sm md:text-[18px] leading-relaxed">
+            TG Academy is a hub of knowledge and skill-building resources designed
+            to empower tech talents on their learning journey. From technical courses
+            covering the latest programming languages and development frameworks to
+            soft skills training in leadership, effective communication and project
+            management, TG Academy offers a wide range of courses to cater to diverse
+            learning needs. With accessible and interactive learning materials,
+            individuals can enhance their skills and stay ahead in today's competitive
+            tech landscape.
+          </p>
+
+          <div>
+            <p className="font-bold mt-4">Some of our courses include:</p>
+
+            <ul className="mt-3 list-disc list-inside grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-x-2 gap-y-1 text-sm">
+              {courses.map((course, index) => (
+                <li key={index}>{course}</li>
+              ))}
+            </ul>
+          </div>
+
+          <Link
+            href="#"
+            className="bg-[#571244] text-white w-fit py-2.5 px-6 rounded-[8px] flex gap-2 items-center"
+          >
+            <span>Learn More</span>
+            <Image
+              src="/arrow-up-right.svg"
+              width={10}
+              height={10}
+              alt="arrow-right-up"
+              aria-hidden="true"
+            />
+          </Link>
+
+        </div>
+      </article>
+      </div>
+    </section>
   );
 };
 

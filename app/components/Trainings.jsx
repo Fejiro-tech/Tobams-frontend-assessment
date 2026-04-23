@@ -23,6 +23,7 @@ const TrainingSections = ({
               src={image}
               alt={title}
               fill
+              sizes="(max-width: 768px) 100vw, 550px"
               className={`object-cover ${imageClass}`}
             />
           </div>
@@ -42,13 +43,11 @@ const TrainingSections = ({
             <ul className="space-y-2 sm:space-y-3">
               {items.map((item, index) => (
                 <li key={index} className="flex items-start gap-2 sm:gap-3">
-                  <Image
+                  <img
                     src="/vector.svg"
-                    width={16}
-                    height={16}
-                    alt=""
-                    aria-hidden="true"
-                    className="mt-1 shrink-0"
+                    alt="vector"
+    
+                    className="mt-1 shrink-0 w-4 h-4"
                   />
                   <span className="text-sm sm:text-base text-gray-700 leading-relaxed">
                     {item}

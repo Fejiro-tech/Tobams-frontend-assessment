@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const Management = () => {
   return (
@@ -15,6 +14,7 @@ const Management = () => {
                 src="/image5.jpg"
                 fill
                 alt="Management Development Program training session"
+                sizes="(max-width: 768px) 100vw, 550px"
                 className="object-cover rounded-tl rounded-tr-lg rounded-bl-lg"
               />
             </div>
@@ -50,12 +50,10 @@ const Management = () => {
                   key={index}
                   className="flex items-center gap-2 bg-[#8F6182] rounded-lg px-2 py-1  text-sm md:text-base text-white w-full"
                 >
-                  <Image
+                   <img
                     src="/whiteVector.svg"
-                    width={14}
-                    height={14}
-                    alt=""
-                    aria-hidden="true"
+                    alt="svg-icon"
+                    className="w-[14px] h-[14px]"
                   />
                   <span>{item}</span>
                 </li>
