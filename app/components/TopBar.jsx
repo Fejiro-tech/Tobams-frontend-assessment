@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
@@ -18,6 +18,11 @@ const navLinks = [
 const TopBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("About");
+
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", mobileOpen);
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [mobileOpen]);
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
