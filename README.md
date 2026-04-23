@@ -31,7 +31,7 @@ The project follows a component-based architecture where each section of the hom
 
 ```bash
 git clone https://github.com/Fejiro-tech/Tobams-frontend-assessment.git
-cd frontend-assessment
+
 ```
 
 ### 2. Install dependencies
