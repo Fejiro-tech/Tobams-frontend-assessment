@@ -44,7 +44,7 @@ const Testimonials = () => {
   return (
     <section className="w-full py-16 px-4 md:px-16">
 
-      <h2 className="text-[#151515] text-[40px] font-bold text-center mb-10">
+      <h2 className="text-[#151515] text-[20px] md:text-[32px] lg:text-[40px] font-bold text-center mb-10">
         Testimonials
       </h2>
 
